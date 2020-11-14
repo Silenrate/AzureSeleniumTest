@@ -16,7 +16,7 @@ public class PruebaDefinition {
 		PruebaSteps.IngresarCrearCuenta();
 	}
 
-	@When("^Quiero crear una Cuenta Con mis datos personales$")
+	@When("^Quiero crear una Cuenta con mis nombre de usuario$")
 	public void quiero_crear_una_Cuenta_Con_mis_datos_personales() throws Exception {
 		PruebaSteps.DatosPersonales();
 	}
@@ -27,7 +27,7 @@ public class PruebaDefinition {
 		PruebaSteps.Contrasena();
 	}
 
-	@Then("^Validar que la cuenta se pueda Crear$")
+	@Then("^Validar que la cuenta se haya creado$")
 	public void validar_que_la_cuenta_se_pueda_Crear() throws Exception {
 	    PruebaSteps.ValidacionCrearCuenta();
 	}
@@ -39,7 +39,7 @@ public class PruebaDefinition {
 	
 	@When("^Quiero crear una Cuenta Con mis lo mismos datos personales Nombre \"([^\"]*)\" Apellidos \"([^\"]*)\" y cuentas \"([^\"]*)\"$")
 	public void quiero_crear_una_Cuenta_Con_mis_lo_mismos_datos_personales_Nombre_Apellidos_y_cuentas(String nombres, String apellidos, String cuenta) throws Exception {
-		PruebaSteps.IngresarCrearCuenta(nombres,apellidos,cuenta);
+		PruebaSteps.IngresarCrearCuenta(nombres);
 	}
 
 
