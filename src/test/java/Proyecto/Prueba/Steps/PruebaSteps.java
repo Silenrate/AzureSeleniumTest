@@ -29,14 +29,16 @@ public class PruebaSteps {
     }
 
     @Step
-    public void IngresarCrearCuenta(String nombres) {
-        PruebaPageObject.EscribirNombre(nombres);
+    public void IngresarCrearCuenta(String nombre) {
+        PruebaPageObject.EscribirNombre(nombre);
     }
 
     public void Contrasena(String passwd) {
         PruebaPageObject.EscribirPasswd(passwd);
         PruebaPageObject.InteractuarSiguiente();
-
     }
 
+    public void validarMensajeDeError(String arg1) {
+        PruebaPageObject.validarMensajeDeError(arg1);
+    }
 }

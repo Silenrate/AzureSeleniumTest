@@ -37,20 +37,20 @@ public class PruebaDefinition {
 		PruebaSteps.IngresarCrearCuenta();
 	}
 	
-	@When("^Quiero crear una Cuenta Con mis lo mismos datos personales Nombre \"([^\"]*)\" Apellidos \"([^\"]*)\" y cuentas \"([^\"]*)\"$")
-	public void quiero_crear_una_Cuenta_Con_mis_lo_mismos_datos_personales_Nombre_Apellidos_y_cuentas(String nombres, String apellidos, String cuenta) throws Exception {
-		PruebaSteps.IngresarCrearCuenta(nombres);
+	@When("^Quiero crear una Cuenta con el nombre \"([^\"]*)\"$")
+	public void quiero_crear_una_Cuenta_Con_el_nombre(String username) throws Exception {
+		PruebaSteps.IngresarCrearCuenta(username);
 	}
 
 
 	@When("^Un passwd correcto \"([^\"]*)\"$")
-	public void un_passwd_correcto(String passwd) throws Exception {
-		PruebaSteps.Contrasena(passwd);
+	public void un_passwd_correcto(String password) throws Exception {
+		PruebaSteps.Contrasena(password);
 	}
 
 	@Then("^Validar que la cuenta no se pueda Crear \"([^\"]*)\"$")
 	public void validar_que_la_cuenta_no_se_pueda_Crear(String arg1) throws Exception {
-	 
+	 	PruebaSteps.validarMensajeDeError(arg1);
 	}
 
 

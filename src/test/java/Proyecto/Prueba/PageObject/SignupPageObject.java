@@ -23,7 +23,9 @@ public class SignupPageObject extends PageObject{
 
 	@FindBy(xpath="/html/body/div[2]")
 	public WebElementFacade LBL_CONFIRMACION;
-	
+
+	@FindBy(id="swal2-content")
+	public WebElementFacade LBL_ERROR;
 	
 	public void EscribirNombre() {
 		TXT_NOMBRE.sendKeys("SeleniumTester");
@@ -43,8 +45,8 @@ public class SignupPageObject extends PageObject{
 		assertThat(strMensaje,is("Signed in successfully"));
 	}
 
-	public void EscribirNombre(String nombres) {
-		TXT_NOMBRE.sendKeys(nombres);
+	public void EscribirNombre(String nombre) {
+		TXT_NOMBRE.sendKeys(nombre);
 	}
 
 	public void EscribirPasswd(String passwd) {
@@ -52,5 +54,9 @@ public class SignupPageObject extends PageObject{
 	}
 
 
-	
+	public void validarMensajeDeError(String arg1) {
+		waitFor(5).milliseconds();
+		String strMensaje = LBL_ERROR.getText();
+		assertThat(strMensaje,is(arg1));
+	}
 }
