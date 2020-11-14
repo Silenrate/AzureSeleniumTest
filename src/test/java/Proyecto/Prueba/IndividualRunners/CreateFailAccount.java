@@ -1,13 +1,10 @@
-package Proyecto.Prueba;
+package Proyecto.Prueba.IndividualRunners;
 
 import cucumber.api.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
 import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
-//@CucumberOptions(features = "src/test/resources/features/")
-//@CucumberOptions(features = "src/test/resources/features/",  glue = "Definitions")
 @CucumberOptions(features = "src/test/resources/features/", tags = {"@Scenario:NoCrearCuenta"})
-//@CucumberOptions(features = "src/test/resources/features/", tags = {"@Scenario:InteraccionLinksTuPlus"})
 public class CreateFailAccount {
 }

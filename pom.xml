@@ -150,8 +150,7 @@
 				<version>2.22.1</version>
 				<configuration>
 					<includes>
-						<include>**/CreateAccountSuccessfully.java</include>
-						<include>**/CreateFailAccount.java</include>
+						<include>**/Runner.java</include>
 					</includes>
 					<systemPropertyVariables>
 						<webdriver.base.url>${webdriver.base.url}</webdriver.base.url>

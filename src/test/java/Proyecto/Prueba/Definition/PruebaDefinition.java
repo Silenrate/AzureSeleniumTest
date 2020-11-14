@@ -53,5 +53,24 @@ public class PruebaDefinition {
 	 	PruebaSteps.validarMensajeDeError(arg1);
 	}
 
+	@Given("^Como un usuario que aun no se registra$")
+	public void como_un_usuario_que_aun_no_se_registra() throws Exception {
+		PruebaSteps.IngresarLogin();
+	}
+
+	@When("^Quiero registrarme con mi nombre de usuario$")
+	public void quiero_registrarme_con_mi_nombre_de_usuario() throws Exception {
+		PruebaSteps.IngresarNombre();
+	}
+
+	@When("^mi clave correcta$")
+	public void mi_clave_correcta() throws Exception {
+		PruebaSteps.IngresarClave();
+	}
+
+	@Then("^Validar que me haya autenticado$")
+	public void Validar_que_me_haya_autenticado() throws Exception {
+		PruebaSteps.validarLogin();
+	}
 
 }

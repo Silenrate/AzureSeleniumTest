@@ -1,44 +1,62 @@
 package Proyecto.Prueba.Steps;
 
+import Proyecto.Prueba.PageObject.LoginPageObject;
 import Proyecto.Prueba.PageObject.SignupPageObject;
 import net.thucydides.core.annotations.Step;
 
 public class PruebaSteps {
-    SignupPageObject PruebaPageObject;
+
+    SignupPageObject signupPageObject;
+    LoginPageObject loginPageObject;
 
     @Step
     public void IngresarCrearCuenta() {
-        PruebaPageObject.open();
-
+        signupPageObject.open();
     }
 
     @Step
     public void DatosPersonales() {
-        PruebaPageObject.EscribirNombre();
+        signupPageObject.EscribirNombre();
     }
 
     @Step
     public void Contrasena() {
-        PruebaPageObject.EscribirPasswd();
-        PruebaPageObject.InteractuarSiguiente();
+        signupPageObject.EscribirPasswd();
+        signupPageObject.InteractuarSiguiente();
     }
 
     @Step
     public void ValidacionCrearCuenta() {
-        PruebaPageObject.LeerResultado();
+        signupPageObject.LeerResultado();
     }
 
     @Step
     public void IngresarCrearCuenta(String nombre) {
-        PruebaPageObject.EscribirNombre(nombre);
+        signupPageObject.EscribirNombre(nombre);
     }
 
     public void Contrasena(String passwd) {
-        PruebaPageObject.EscribirPasswd(passwd);
-        PruebaPageObject.InteractuarSiguiente();
+        signupPageObject.EscribirPasswd(passwd);
+        signupPageObject.InteractuarSiguiente();
     }
 
     public void validarMensajeDeError(String arg1) {
-        PruebaPageObject.validarMensajeDeError(arg1);
+        signupPageObject.validarMensajeDeError(arg1);
+    }
+
+    public void IngresarLogin() {
+        loginPageObject.open();
+    }
+
+    public void IngresarNombre() {
+        loginPageObject.ingresarNombre();
+    }
+
+    public void IngresarClave() {
+        loginPageObject.ingresarClave();
+    }
+
+    public void validarLogin() {
+        loginPageObject.validarLogin();
     }
 }
