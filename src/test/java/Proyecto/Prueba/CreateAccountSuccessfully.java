@@ -1,4 +1,4 @@
-package Proyecto.Prueba.IndividualRunners;
+package Proyecto.Prueba;
 
 import org.junit.runner.RunWith;
 

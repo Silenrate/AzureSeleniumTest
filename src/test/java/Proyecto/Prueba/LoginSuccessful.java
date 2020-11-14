@@ -1,4 +1,4 @@
-package Proyecto.Prueba.IndividualRunners;
+package Proyecto.Prueba;
 
 import cucumber.api.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
