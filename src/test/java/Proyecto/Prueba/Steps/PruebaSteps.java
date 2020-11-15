@@ -59,4 +59,12 @@ public class PruebaSteps {
     public void validarLogin() {
         loginPageObject.validarLogin();
     }
+
+    public void IngresarClaveIncorrecta() {
+        loginPageObject.ingresarClaveIncorrecta();
+    }
+
+    public void validarLoginFallido() {
+        loginPageObject.validarLoginFallido();
+    }
 }

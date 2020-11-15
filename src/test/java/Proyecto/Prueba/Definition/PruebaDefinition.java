@@ -69,8 +69,18 @@ public class PruebaDefinition {
 	}
 
 	@Then("^Validar que me haya autenticado$")
-	public void Validar_que_me_haya_autenticado() throws Exception {
+	public void validar_que_me_haya_autenticado() throws Exception {
 		PruebaSteps.validarLogin();
+	}
+
+	@When("^una clave incorrecta$")
+	public void una_clave_incorrecta() throws Exception {
+		PruebaSteps.IngresarClaveIncorrecta();
+	}
+
+	@Then("^Validar que no me haya autenticado$")
+	public void validar_que_no_me_haya_autenticado() throws Exception {
+		PruebaSteps.validarLoginFallido();
 	}
 
 }

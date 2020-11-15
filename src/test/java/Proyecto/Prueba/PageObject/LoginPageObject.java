@@ -25,6 +25,9 @@ public class LoginPageObject extends PageObject {
     @FindBy(id = "welcome")
     public WebElementFacade LBL_WELCOME;
 
+    @FindBy(id = "swal2-content")
+    public WebElementFacade LBL_ERROR;
+
     public void ingresarNombre() {
         TXT_NOMBRE.sendKeys("walteros");
     }
@@ -38,5 +41,16 @@ public class LoginPageObject extends PageObject {
         waitFor(5).seconds();
         String nombre = LBL_WELCOME.getText();
         assertThat(nombre, is("Welcome walteros"));
+    }
+
+    public void ingresarClaveIncorrecta() {
+        TXT_CLAVE.sendKeys("12345");
+        BTN_LOGIN.click();
+    }
+
+    public void validarLoginFallido() {
+        waitFor(2).seconds();
+        String error = LBL_ERROR.getText();
+        assertThat(error, is("Usuario o clave incorrectos"));
     }
 }
