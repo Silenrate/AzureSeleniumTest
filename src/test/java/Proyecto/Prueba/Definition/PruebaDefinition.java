@@ -110,4 +110,15 @@ public class PruebaDefinition {
 		PruebaSteps.validarAlimentoNoAgregado();
 	}
 
+	@When("^Quiero eliminar un alimento$")
+	public void quiero_eliminar_un_alimento() throws Exception {
+		PruebaSteps.IngresarAlimento();
+		PruebaSteps.EliminarAlimento();
+	}
+
+	@Then("^Validar que mi alimento se haya eliminado$")
+	public void validar_que_mi_alimento_se_haya_eliminado() throws Exception {
+		PruebaSteps.validarAlimentoEliminado();
+	}
+
 }

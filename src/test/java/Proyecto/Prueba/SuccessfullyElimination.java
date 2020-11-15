@@ -5,6 +5,6 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
-@CucumberOptions(features = "src/test/resources/features/", tags = {"@Scenario:AutenticacionIncorrecta"})
-public class FailLogin {
+@CucumberOptions(features = "src/test/resources/features/", tags = {"@Scenario:EliminacionCorrecta"})
+public class SuccessfullyElimination {
 }

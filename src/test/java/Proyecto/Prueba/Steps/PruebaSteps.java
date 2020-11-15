@@ -86,4 +86,12 @@ public class PruebaSteps {
     public void validarAlimentoNoAgregado() {
         indexPageObject.validarAlimentoNoAgregado();
     }
+
+    public void EliminarAlimento() {
+        indexPageObject.eliminarAlimento();
+    }
+
+    public void validarAlimentoEliminado() {
+        indexPageObject.validarAlimentoEliminado();
+    }
 }

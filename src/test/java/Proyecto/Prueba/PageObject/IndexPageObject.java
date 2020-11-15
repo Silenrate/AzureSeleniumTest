@@ -25,6 +25,12 @@ public class IndexPageObject extends PageObject {
     @FindBy(id = "swal2-content")
     public WebElementFacade LBL_ERROR;
 
+    @FindBy(xpath = "//*[@id=\"table_body\"]/tr/td[2]/button")
+    public WebElementFacade BTN_DELETE_FOOD;
+
+    @FindBy(id = "table_footer")
+    public WebElementFacade LBL_TABLE_FOOTER;
+
     public void ingresarNombreAlimento() {
         TXT_NEW_FOOD.sendKeys(foodName);
     }
@@ -37,11 +43,23 @@ public class IndexPageObject extends PageObject {
         waitFor(2).seconds();
         String name = LBL_FOOD_NAME.getText();
         assertThat(name, is(foodName));
+        BTN_DELETE_FOOD.click();
     }
 
     public void validarAlimentoNoAgregado() {
         waitFor(2).seconds();
         String error = LBL_ERROR.getText();
         assertThat(error, is("Name cannot be empty"));
+    }
+
+    public void eliminarAlimento() {
+        waitFor(2).seconds();
+        BTN_DELETE_FOOD.click();
+    }
+
+    public void validarAlimentoEliminado() {
+        waitFor(2).seconds();
+        String error = LBL_TABLE_FOOTER.getText();
+        assertThat(error, is("No se encontraron alimentos"));
     }
 }
