@@ -22,6 +22,9 @@ public class IndexPageObject extends PageObject {
     @FindBy(xpath = "//*[@id=\"table_body\"]/tr/td[1]")
     public WebElementFacade LBL_FOOD_NAME;
 
+    @FindBy(id = "swal2-content")
+    public WebElementFacade LBL_ERROR;
+
     public void ingresarNombreAlimento() {
         TXT_NEW_FOOD.sendKeys(foodName);
     }
@@ -34,5 +37,11 @@ public class IndexPageObject extends PageObject {
         waitFor(2).seconds();
         String name = LBL_FOOD_NAME.getText();
         assertThat(name, is(foodName));
+    }
+
+    public void validarAlimentoNoAgregado() {
+        waitFor(2).seconds();
+        String error = LBL_ERROR.getText();
+        assertThat(error, is("Name cannot be empty"));
     }
 }

@@ -100,4 +100,14 @@ public class PruebaDefinition {
 		PruebaSteps.validarAlimentoAgregado();
 	}
 
+	@When("^Quiero adicionar un alimento sin nombre$")
+	public void quiero_adicionar_un_alimento_sin_nombre() throws Exception {
+		PruebaSteps.IngresarAlimentoSinNombre();
+	}
+
+	@Then("^Validar que el alimento no se haya agregado$")
+	public void validar_que_el_alimento_no_se_haya_agregado() throws Exception {
+		PruebaSteps.validarAlimentoNoAgregado();
+	}
+
 }
