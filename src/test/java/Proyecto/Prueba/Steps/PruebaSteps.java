@@ -1,5 +1,6 @@
 package Proyecto.Prueba.Steps;
 
+import Proyecto.Prueba.PageObject.IndexPageObject;
 import Proyecto.Prueba.PageObject.LoginPageObject;
 import Proyecto.Prueba.PageObject.SignupPageObject;
 import net.thucydides.core.annotations.Step;
@@ -8,6 +9,7 @@ public class PruebaSteps {
 
     SignupPageObject signupPageObject;
     LoginPageObject loginPageObject;
+    IndexPageObject indexPageObject;
 
     @Step
     public void IngresarCrearCuenta() {
@@ -66,5 +68,14 @@ public class PruebaSteps {
 
     public void validarLoginFallido() {
         loginPageObject.validarLoginFallido();
+    }
+
+    public void IngresarAlimento() {
+        indexPageObject.ingresarNombreAlimento();
+        indexPageObject.agregarAlimento();
+    }
+
+    public void validarAlimentoAgregado() {
+        indexPageObject.validarAlimentoAgregado();
     }
 }

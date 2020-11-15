@@ -83,4 +83,21 @@ public class PruebaDefinition {
 		PruebaSteps.validarLoginFallido();
 	}
 
+	@Given("^Como un usuario registrado$")
+	public void como_un_usuario_registrado() throws Exception {
+		PruebaSteps.IngresarLogin();
+		PruebaSteps.IngresarNombre();
+		PruebaSteps.IngresarClave();
+	}
+
+	@When("^Quiero adicionar un alimento$")
+	public void quiero_adicionar_un_alimento() throws Exception {
+		PruebaSteps.IngresarAlimento();
+	}
+
+	@Then("^Validar que mi alimento se haya agregado$")
+	public void validar_que_mi_alimento_se_haya_agregado() throws Exception {
+		PruebaSteps.validarAlimentoAgregado();
+	}
+
 }
