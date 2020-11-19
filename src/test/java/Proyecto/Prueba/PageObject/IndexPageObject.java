@@ -31,8 +31,8 @@ public class IndexPageObject extends PageObject {
     @FindBy(id = "table_footer")
     public WebElementFacade LBL_TABLE_FOOTER;
 
-    public void ingresarNombreAlimento() {
-        TXT_NEW_FOOD.sendKeys(foodName);
+    public void ingresarNombreAlimento(String nombre) {
+        TXT_NEW_FOOD.sendKeys(nombre);
     }
 
     public void agregarAlimento() {

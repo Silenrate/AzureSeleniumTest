@@ -70,8 +70,8 @@ public class PruebaSteps {
         loginPageObject.validarLoginFallido();
     }
 
-    public void IngresarAlimento() {
-        indexPageObject.ingresarNombreAlimento();
+    public void IngresarAlimento(String nombre) {
+        indexPageObject.ingresarNombreAlimento(nombre);
         indexPageObject.agregarAlimento();
     }
 
