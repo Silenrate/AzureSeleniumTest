@@ -11,8 +11,6 @@ import static org.junit.Assert.assertThat;
 @DefaultUrl("https://foodapitacs.herokuapp.com/index.html")
 public class IndexPageObject extends PageObject {
 
-    String foodName = "Pizza";
-
     @FindBy(id = "new_name")
     public WebElementFacade TXT_NEW_FOOD;
 
@@ -39,10 +37,10 @@ public class IndexPageObject extends PageObject {
         BTN_ADD_FOOD.click();
     }
 
-    public void validarAlimentoAgregado() {
+    public void validarAlimentoAgregado(String nombre) {
         waitFor(2).seconds();
         String name = LBL_FOOD_NAME.getText();
-        assertThat(name, is(foodName));
+        assertThat(name, is(nombre));
         BTN_DELETE_FOOD.click();
     }
 

@@ -95,9 +95,9 @@ public class PruebaDefinition {
         PruebaSteps.IngresarAlimento(nombre);
     }
 
-    @Then("^Validar que mi alimento se haya agregado$")
-    public void validar_que_mi_alimento_se_haya_agregado() throws Exception {
-        PruebaSteps.validarAlimentoAgregado();
+    @Then("^Validar que mi alimento se haya agregado con el nombre \"([^\"]*)\"$")
+    public void validar_que_mi_alimento_se_haya_agregado(String nombre) throws Exception {
+        PruebaSteps.validarAlimentoAgregado(nombre);
     }
 
     @When("^Quiero adicionar un alimento sin nombre$")

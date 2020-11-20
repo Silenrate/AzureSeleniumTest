@@ -75,8 +75,8 @@ public class PruebaSteps {
         indexPageObject.agregarAlimento();
     }
 
-    public void validarAlimentoAgregado() {
-        indexPageObject.validarAlimentoAgregado();
+    public void validarAlimentoAgregado(String nombre) {
+        indexPageObject.validarAlimentoAgregado(nombre);
     }
 
     public void IngresarAlimentoSinNombre() {
