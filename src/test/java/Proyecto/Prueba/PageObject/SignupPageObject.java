@@ -10,7 +10,7 @@ import net.thucydides.core.annotations.DefaultUrl;
 @DefaultUrl("https://foodapitacs.herokuapp.com/signup.html")
 public class SignupPageObject extends PageObject{
 
-	String TXT_CONTRASENA="TACS123";
+	String TXT_CONTRASENA="Testing123%";
 
 	@FindBy(id="name_signup")
 	public WebElementFacade TXT_NOMBRE;
@@ -18,7 +18,7 @@ public class SignupPageObject extends PageObject{
 	@FindBy(id="pass")
 	public WebElementFacade TXT_PASSWD;
 	
-	@FindBy(xpath="//*[@id=\"register-form\"]/div[3]/button")
+	@FindBy(xpath="//*[@id=\"register-form\"]/div[4]/button")
 	public WebElementFacade BTN_SIGUIENTE;
 
 	@FindBy(xpath="/html/body/div[2]")

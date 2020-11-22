@@ -17,6 +17,6 @@ Feature: Realizar Creacion de Cuenta de Correo
     Then Validar que la cuenta no se pueda Crear "<mensaje>"
 
     Examples:
-      | username | password | mensaje                               |
-      | walteros | loquesea | Ya existe un usuario con dicho correo |
-      |          | aaaa     | The name cannot be empty              |
+      | username | password    | mensaje                               |
+      | walteros | Testing123% | Ya existe un usuario con dicho correo |
+      |          | aaaa        | The name cannot be empty              |
