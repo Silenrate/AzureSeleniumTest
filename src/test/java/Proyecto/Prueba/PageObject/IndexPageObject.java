@@ -47,7 +47,7 @@ public class IndexPageObject extends PageObject {
     public void validarAlimentoNoAgregado() {
         waitFor(2).seconds();
         String error = LBL_ERROR.getText();
-        assertThat(error, is("Name cannot be empty"));
+        assertThat(error, is("Error al insertar"));
     }
 
     public void eliminarAlimento() {
